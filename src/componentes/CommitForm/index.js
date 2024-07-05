@@ -14,10 +14,10 @@ function CommitForm({ onFetchCommits }) {
         type="text"
         value={repoUrl}
         onChange={(e) => setRepoUrl(e.target.value)}
-        placeholder="Digite a URL do repositorio GitHub"
+        placeholder="Digite a URL do repositorio Git sem o .git no final"
         required
       />
-      <button type="submit">Consulta Commits</button>
+      <button type="submit">Consulta</button>
     </form>
   );
 }
