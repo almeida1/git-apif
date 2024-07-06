@@ -8,13 +8,16 @@ function App() {
 
   const fetchCommits = async (repoUrl) => {
     try {
-      const response = await fetch("http://localhost:8080/commits", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ repoUrl }),
-      });
+      const response = await fetch(
+        "https://git-apib-f79a4b0e1880.herokuapp.com/commits",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ repoUrl }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
